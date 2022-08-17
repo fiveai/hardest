@@ -1,5 +1,9 @@
 # Hardest
 
+[![Run tests](https://github.com/fiveai/hardest/actions/workflows/python-package.yml/badge.svg)](https://github.com/fiveai/hardest/actions/workflows/python-package.yml)
+[![Upload Python Package](https://github.com/fiveai/hardest/actions/workflows/deploy.yml/badge.svg)](https://github.com/fiveai/hardest/actions/workflows/deploy.yml)
+[![pre-commit](https://github.com/fiveai/hardest/actions/workflows/pre-commit.yml/badge.svg)](https://github.com/fiveai/hardest/actions/workflows/pre-commit.yml)
+
 The HARDness ESTimation package: A library for ranking images from a dataset by hardness with respect to a specific detector.
 Currently, we provide examples in the library for torchvision datasets and detectors, but other datasets and detectors
 can be used by converting the data to the torchvision format.
