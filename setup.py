@@ -28,6 +28,7 @@ setup(
     name=NAME,
     description="The HARDness ESTimation package: ranks an object detection dataset by the expected hardness of the "
     "images.",
+    long_description_content_type="text/markdown",
     long_description=README,
     author="Jonathan Sadeghi",
     author_email="jonathan.sadeghi@five.ai",
