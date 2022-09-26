@@ -4,6 +4,8 @@
 [![Upload Python Package](https://github.com/fiveai/hardest/actions/workflows/deploy.yml/badge.svg)](https://github.com/fiveai/hardest/actions/workflows/deploy.yml)
 [![pre-commit](https://github.com/fiveai/hardest/actions/workflows/pre-commit.yml/badge.svg)](https://github.com/fiveai/hardest/actions/workflows/pre-commit.yml)
 
+[![arXiv](https://img.shields.io/badge/arXiv-2209.11559-b31b1b.svg)](https://arxiv.org/abs/2209.11559)
+
 The HARDness ESTimation package: A library for ranking images from a dataset by hardness with respect to a specific detector.
 Currently, we provide examples in the library for torchvision datasets and detectors, but other datasets and detectors
 can be used by converting the data to the torchvision format.
@@ -74,7 +76,7 @@ https://github.com/open-mmlab/mmdetection3d/blob/master/configs/nuimages/README.
 
 If you use the package in your research please consider citing our paper:
 ```
-details here
+Ayers, E., Sadeghi, J., Redford, J., Mueller, R., & Dokania, P. K. (2022). Query-based Hard-Image Retrieval for Object Detection at Test Time. doi:10.48550/ARXIV.2209.11559
 ```
 
 ## Contributors
