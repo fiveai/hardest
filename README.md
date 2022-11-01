@@ -18,14 +18,31 @@ pip install hardest
 
 Here we provide instructions for computing the hardness of an entire dataset.
 Firstly obtain a pytorch dataset:
+
 ```python
 from torchvision.datasets.coco import CocoDetection
 import itertools
-dataset = CocoDetection(...)
+from os.path import join
+import torchvision.transforms as T
+from hardest.utils import coco_api_to_torchvision
+
+coco_dir = "<path/to/coco>"
+
+transform = T.Compose([
+    T.PILToTensor(),
+    T.ConvertImageDtype(torch.float),
+])
+
+val_dataset = CocoDetection(
+    root = join(coco_dir, "val2017"),
+    annFile = join(coco_dir, "annotations", "instances_val2017.json"),
+    transform = transform,
+    target_transform = coco_api_to_torchvision
+)
 
 # Run on a subset of the dataset
 n_examples = 50
-images, targets = zip(*itertools.islice(dataset, n_examples))
+images, targets = zip(*itertools.islice(val_dataset, n_examples))
 
 ```
 Obtain detections:
@@ -61,7 +78,7 @@ rank = ScoreSamplingHardnessCalculation(hardness_definition, n_samples=10).eval_
 ```
 
 ## Reproducing published results
-To repeat the experiments from our paper (details here), first install the [COCO](https://cocodataset.org) as well as the [nuImages](https://www.nuscenes.org/nuimages) datasets and convert it to a COCO compatible format [using these instructions](https://github.com/open-mmlab/mmdetection3d/blob/master/configs/nuimages/README.md).
+To repeat the experiments from our paper (details here), first download the [COCO Dataset](https://cocodataset.org/#download) (you only need _2017 Val images_ and _2017 Train/Val annotations_) as well as the [nuImages](https://www.nuscenes.org/nuimages) dataset and convert it to a COCO compatible format [using these instructions](https://github.com/open-mmlab/mmdetection3d/blob/master/configs/nuimages/README.md).
 Then export the detections for your desired detector to torchvision json format.
 
 Finally, run the script:
@@ -84,7 +101,7 @@ Ayers, E., Sadeghi, J., Redford, J., Mueller, R., & Dokania, P. K. (2022). Query
 ### Authors
 
 - Jonathan Sadeghi
-- Edward Ayres
+- Edward Ayers
 
 ### Internal Review
 
