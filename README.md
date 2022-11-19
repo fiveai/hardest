@@ -93,7 +93,7 @@ https://github.com/open-mmlab/mmdetection3d/blob/master/configs/nuimages/README.
 
 If you use the package in your research please consider citing our paper:
 ```
-Ayers, E., Sadeghi, J., Redford, J., Mueller, R., & Dokania, P. K. (2022). Query-based Hard-Image Retrieval for Object Detection at Test Time. doi:10.48550/ARXIV.2209.11559
+Ayers, E., Sadeghi, J., Redford, J., Mueller, R., & Dokania, P. K. (2022). Query-based Hard-Image Retrieval for Object Detection at Test Time. Thirty-Seventh AAAI Conference on Artificial Intelligence. doi:10.48550/ARXIV.2209.11559
 ```
 
 ## Contributors
