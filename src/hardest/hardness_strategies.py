@@ -297,9 +297,9 @@ class BinaryDempster(UncertaintyMeasure):
 
         """
         p = detection["scores"]
-        Z = np.sum([p / (1 - p), (1 - p) / p], axis=0)
+        Z = np.sum(np.stack([p / (1 - p), (1 - p) / p]), axis=0)
         DS = 2 / (2 + Z)
-        return self.reduction(DS.numpy()).item()
+        return self.reduction(DS).item()
 
 
 class Dempster(KClassUncertaintyMeasure):
