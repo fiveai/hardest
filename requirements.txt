@@ -2,7 +2,7 @@ torch
 torchvision
 torchmetrics
 scipy
-sklearn
+scikit-learn
 num2words
 pandas
 tqdm

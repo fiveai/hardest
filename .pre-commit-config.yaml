@@ -1,6 +1,6 @@
 fail_fast: false
 default_language_version:
-  python: python3.8
+    python: python3
 repos:
   - repo: https://github.com/psf/black
     rev: "22.3.0"
@@ -27,7 +27,7 @@ repos:
     - id: check-toml
     - id: check-ast
 
-  - repo: https://gitlab.com/pycqa/flake8
+  - repo: https://github.com/pycqa/flake8
     rev: "3.9.0"
     hooks:
     - id: flake8
